@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link rel=stylesheet href="solar.css">
+</head>
+<body>
+  <video autoplay loop muted>
+    <source src="mix.mp4">
+  </video>
+  <a href="junior.html">
+  <h3>Powered By</h3>
+  <h2>JUNIORS BD</h2>
+</a>
+  <div class="other">
+  <a href="sun.html">SUN</a>
+  <a href="moon.html">MOON</a>
+  </div>
+<select onchange="window.location.href=this.value">
+  <option>PLANETS</option>
+  <option value="mercury.html">MERCURY</option>
+  <option value="venus.html">VENUS</option>
+  <option value="earth.html">EARTH</option>
+  <option value="mars.html">MARS</option>
+  <option value="jupiter.html">JUPITER</option>
+  <option value="saturn.html">SATURN</option>
+  <option value="uranus.html">URANUS</option>
+  <option value="neptune.html">NEPTUNE</option>
+</select>
+
+  <!-- <section class="firstsection"> -->
+    <div class="logo">
+      <img src="./images/pngwing.com.png">
+      <h1>NASA</h1>
+    </div>
+    <!-- Element to contain animated typing -->
+    <span id="element"></span>
+
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["PLANETS AND MOONS"],
+        typeSpeed: 50,
+      });
+    </script>
+
+  <div class="container">
+    <div class="sun">
+      <img src="./images/sun.png" alt="sun">
+    </div>
+    <div class="mercury"></div>
+    <div class="venus"></div>
+    <div class="earth">
+      <div class="moon"></div>
+    </div>
+    <div class="mars"></div>
+    <div class="jupiter"></div>
+    <div class="saturn"></div>
+    <div class="uranus"></div>
+    <div class="neptune"></div>
+  </div>
+  <a href="solarinfo.html">
+  <button type="button" class="btn">
+    <strong>LEARN</strong>
+    <div id="container-stars">
+      <div id="stars"></div>
+    </div>
+  
+    <div id="glow">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </button>
+</a>
+  <script src="salar.js"></script>
+</body>
+
+</html>

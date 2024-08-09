@@ -1,0 +1,699 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+.container {
+    font-size: 6px;
+    width: 40em;
+    height: 40em;
+    position: absolute;
+    left: 10%;
+}
+img{
+    height: 130%;
+    width: 130%;
+}
+.sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0 0 3em rgb(255, 128, 0);
+    animation: orbit 50s linear infinite;
+}
+.mercury,
+.venus,
+.earth,
+.moon,
+.mars,
+.jupiter,
+.saturn,
+.uranus,
+.neptune,
+.pluto {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.mercury {
+    top: 12.5em;
+    left: 12.5em;
+    width: 15em;
+    height: 15em;
+    animation: orbit 68.7s linear infinite;
+}
+
+.venus {
+    top: 10em;
+    left: 10em;
+    width: 20em;
+    height: 20em;
+    animation: orbit 48.7s linear infinite;
+}
+
+.earth {
+    top: 6em;
+    left: 6em;
+    width: 28em;
+    height: 28em; 
+    animation: orbit 36.5s linear infinite;   
+}
+.moon {
+    top: 2em;
+    right: -1em;
+    width: 7em;
+    height: 7em; 
+    animation: orbit 2.7s linear infinite;
+}
+.mars {
+    top: 2em;
+    left: 2.5em;
+    width: 36em;
+    height: 36em; 
+    animation: orbit 26.5s linear infinite;
+}
+.jupiter {
+    top: -2em;
+    left: -2em;
+    width: 45em;
+    height: 45em; 
+    animation: orbit 21s linear infinite;
+}
+.saturn {
+    top: -7em;
+    left: -7em;
+    width: 55em;
+    height: 55em; 
+    animation: orbit 17s linear infinite;
+}
+.uranus {
+    top: -12em;
+    left: -12em;
+    width: 65em;
+    height: 65em; 
+    animation: orbit 19s linear infinite;
+}
+.neptune {
+    top: -17em;
+    left: -17em;
+    width: 75em;
+    height: 75em; 
+    animation: orbit 15s linear infinite;
+}
+.pluto {
+    top: -22em;
+    left: -22em;
+    width: 85em;
+    height: 85em; 
+    animation: orbit 18s linear infinite;
+}
+
+.mercury::before,
+.venus::before,
+.earth::before,
+.moon::before,
+.mars::before,
+.jupiter::before,
+.saturn::before,
+.uranus::before,
+.neptune::before,
+.pluto::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: orbit 30s linear infinite;
+}
+.mercury::before {
+    top: 1.5em;
+    right: 0.8em;
+    width: 2em;
+    height: 2em;
+    background-image: url('./images/mercury.png');
+    background-size: cover;
+}
+.venus::before {
+    top: 2em;
+    right: 2em;
+    width: 2em;
+    height: 2em;
+    background-image: url('./images/venus.png');
+    background-size: cover;
+}
+.earth::before {
+    top: 3em;
+    right: 0em;
+    width: 5em;
+    height: 5em;
+    background-image: url('./images/earth.png');
+    background-size: cover;
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-image: url('./images/moon.png');
+    background-size: cover;
+}
+.mars::before {
+    top: 5em;
+    right: 3em;
+    width: 3em;
+    height: 3em;
+    background-image: url('./images/mars.png');
+    background-size: cover;
+}
+.jupiter::before {
+    top: 6em;
+    right: 3em;
+    width: 5em;
+    height: 5em;
+    background-image: url('./images/jupiter.png');
+    background-size: cover;
+}
+.saturn::before {
+    top: 7.5em;
+    right: 5em;
+    width: 4.5em;
+    height: 4.5em;
+    background-image: url('./images/saturn.png');
+    background-size: cover;
+}
+.uranus::before {
+    top: 9em;
+    right: 6.5em;
+    width: 4em;
+    height: 4em;
+    background-image: url('./images/uranus.png');
+    background-size: cover;
+}
+.neptune::before {
+    top: 10em;
+    right: 8em;
+    width: 4em;
+    height: 4em;
+    background-image: url('./images/neptune.png');
+    background-size: cover;
+}
+.pluto::before {
+    top: 11em;
+    right: 10em;
+    width: 4em;
+    height: 4em;
+    background-image: url('./images/pluto.png');
+    background-size: cover;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+h1{
+    position: absolute;
+    color: lightsteelblue;
+    font-size: 20px;
+    width: 700px;
+    right: 5%;
+    top: 30%;
+}
+
+h2{
+    position: absolute;
+    color: rgb(189, 139, 15);
+    top: 20%;
+    left: 44%;
+}
+
+a{
+    color: lightsteelblue;
+}
+
+
+.text {
+    translate: 2% -6%;
+    letter-spacing: 0.01ch;
+    color: hsl(0 0% calc(60% + (var(--active) * 26%)));
+    z-index: 999;
+    padding: 0 14px;
+    cursor: pointer;
+  }
+  .text::before {
+    content: "";
+    position: absolute;
+    top: -290%;
+    left: 90%;
+    rotate: -45deg;
+    width: 5em;
+    height: 1px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    animation: 4s shootingStar ease-in-out infinite;
+    transition: 1s ease;
+    z-index: -1;
+    animation-delay: 1s;
+    display: none;
+  }
+  .text::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: -290%;
+    left: 10%;
+    rotate: -45deg;
+    width: 5em;
+    height: 1px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    animation: 7s shootingStar ease-in-out infinite;
+    animation-delay: 3s;
+  }
+  .space-button:hover .text::before,
+  .space-button:hover .text::after {
+    display: block;
+  }
+  .galaxy::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity: 1;
+    box-shadow: 140px 20px #fff, 425px 20px #fff, 70px 120px #fff, 20px 130px #fff,
+      110px 80px #fff, 280px 80px #fff, 250px 350px #fff, 280px 230px #fff,
+      220px 190px #fff, 450px 100px #fff, 380px 80px #fff, 520px 50px #fff;
+    z-index: -1;
+    transition: all 1.5s ease-in-out;
+    animation: 1s glowing-stars linear alternate infinite;
+    animation-delay: 0.4s;
+  }
+  .galaxy::after {
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: -65px;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity: 1;
+    box-shadow: 490px 330px #fff, 420px 300px #fff, 320px 280px #fff,
+      380px 350px #fff, 546px 170px #fff, 420px 180px #fff, 370px 150px #fff,
+      200px 250px #fff, 80px 20px #fff, 190px 50px #fff, 270px 20px #fff,
+      120px 230px #fff, 350px -1px #fff, 150px 369px #fff;
+    z-index: -1;
+    transition: all 2s ease-in-out;
+    animation: 1s glowing-stars linear alternate infinite;
+    animation-delay: 0.8s;
+  }
+  .space-button {
+    --cut: 0.1em;
+    --active: 0;
+    --bg: radial-gradient(
+          120% 120% at 126% 126%,
+          hsl(0 calc(var(--active) * 97%) 98% / calc(var(--active) * 0.9)) 40%,
+          /* Changed hue to 0 for red */ transparent 50%
+        )
+        calc(100px - (var(--active) * 100px)) 0 / 100% 100% no-repeat,
+      radial-gradient(
+          120% 120% at 120% 120%,
+          hsl(0 calc(var(--active) * 97%) 70% / calc(var(--active) * 1)) 30%,
+          /* Changed hue to 0 for red */ transparent 70%
+        )
+        calc(100px - (var(--active) * 100px)) 0 / 100% 100% no-repeat,
+      hsl(0 calc(var(--active) * 100%) calc(12% - (var(--active) * 8%))); /* Changed hue to 0 for red */
+    background: var(--bg);
+    font-size: 1.4rem;
+    font-weight: 500;
+    border: 0;
+    cursor: pointer;
+    padding: 0.9em 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    white-space: nowrap;
+    border-radius: 2rem;
+    position: relative;
+    box-shadow: 0 0 calc(var(--active) * 6em) calc(var(--active) * 3em)
+        hsla(12, 97%, 61%, 0.3),
+      0 0.05em 0 0
+        hsl(0, calc(var(--active) * 97%), calc((var(--active) * 50%) + 30%)) inset,
+      0 -0.05em 0 0 hsl(0, calc(var(--active) * 97%), calc(var(--active) * 10%)) inset;
+  
+    transition: box-shadow 0.25s ease-out, scale 0.25s, background 0.25s;
+    scale: calc(1 + (var(--active) * 0.1));
+    transform-style: preserve-3d;
+    perspective: 100vmin;
+    overflow: hidden;
+  }
+  .space-button:active {
+    scale: 1;
+    --bg: radial-gradient(
+          120% 120% at 126% 126%,
+          hsl(245 calc(var(--active) * 97%) 98% / calc(var(--active) * 0.9)) 40%,
+          transparent 50%
+        )
+        calc(100px - (var(--active) * 100px)) 0 / 100% 100% no-repeat,
+      radial-gradient(
+          120% 120% at 120% 120%,
+          hsl(245 calc(var(--active) * 97%) 70% / calc(var(--active) * 1)) 30%,
+          transparent 70%
+        )
+        calc(100px - (var(--active) * 100px)) 0 / 100% 100% no-repeat,
+      hsl(245 calc(var(--active) * 100%) calc(12% - (var(--active) * 8%)));
+    box-shadow: 0 0 calc(var(--active) * 6em) calc(var(--active) * 3em)
+        hsl(245 97% 61% / 0.5),
+      0 0.05em 0 0
+        hsl(245 calc(var(--active) * 97%) calc((var(--active) * 50%) + 30%)) inset,
+      0 -0.05em 0 0 hsl(245 calc(var(--active) * 97%) calc(var(--active) * 10%)) inset;
+    background: var(--bg);
+  }
+  .galaxy:active::before {
+    animation: circling 2s linear infinite; /* Animation for circling effect */
+  }
+  .galaxy:active::after {
+    animation: circling 1.5s linear infinite; /* Animation for circling effect */
+  }
+  
+  @keyframes circling {
+    0% {
+      transform: translate(-10px, -20%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-10px, -20%) rotate(200deg);
+    }
+  }
+  .galaxy {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    overflow: hidden;
+    opacity: var(--active);
+    transition: opacity 0.25s;
+  }
+  
+  @-webkit-keyframes move-x {
+    0% {
+      translate: -100px 0;
+    }
+    100% {
+      translate: 100px 0;
+    }
+  }
+  @keyframes move-x {
+    0% {
+      translate: -100px 0;
+    }
+    100% {
+      translate: 100px 0;
+    }
+  }
+  @-webkit-keyframes move-y {
+    0% {
+      transform: translate(0, -50px);
+    }
+    100% {
+      transform: translate(0, 50px);
+    }
+  }
+  @keyframes move-y {
+    0% {
+      transform: translate(0, -50px);
+    }
+    100% {
+      transform: translate(0, 50px);
+    }
+  }
+  
+  .backdrop {
+    position: absolute;
+    inset: var(--cut);
+    background: var(--bg);
+    border-radius: 2rem;
+    transition: background 0.25s;
+  }
+  
+  @supports (selector(:has(:is(+ *)))) {
+    body:has(button:is(:hover, :focus-visible)) {
+      --active: 1;
+      --play-state: running;
+    }
+    .bodydrop {
+      display: none;
+    }
+  }
+  
+  .space-button:is(:hover, :focus-visible) ~ :is(.bodydrop, .particle-pen) {
+    --active: 1;
+    --play-state: running;
+  }
+  
+  .space-button:is(:hover, :focus-visible) {
+    --active: 1;
+    --play-state: running;
+  }
+  
+  .galaxy-button {
+    position: relative;
+  }
+  
+  @keyframes shootingStar {
+    0% {
+      transform: translateX(0) translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-55em) translateY(0);
+      opacity: 1;
+    }
+    70% {
+      transform: translateX(-70em) translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes glowing-stars {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  
+
+  .galaxy-button{
+      position: absolute;
+      left: -5%;
+      bottom: 3%;
+      cursor: pointer;
+  }
+
+  
+h4{
+  position: absolute;
+  color: rgb(0, 153, 255);
+  bottom: -2%;
+  right: 2%;
+  font-size: 30px;
+  font-style: italic;
+  cursor: pointer;
+}
+
+h3{
+  position: absolute;
+  color: goldenrod;
+  bottom: 6%;
+  right: 8%;
+  font-style: italic;
+  cursor: pointer;
+}
+
+
+
+select{
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  background: transparent;
+  border: hidden;
+  color: lightskyblue;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+option{
+  color: BLACK;
+  cursor: pointer;
+}
+
+.other{
+  display: flex;
+  position: absolute;
+  right: 14%;
+  top: 3%;
+  font-size: 20px;
+}
+
+.other a{
+  color: lightskyblue;
+  padding-right: 40px;
+}
+
+.logo{
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  top: 5%;
+  left: 5%;
+  cursor: pointer;
+  display: flex;
+  color: lightskyblue;
+  align-items: center;
+  font-size: 40px;
+}
+
+
+button {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  bottom: 13%;
+  left: 44%;
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  box-shadow: 0 0 5px 1px white;
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: rgba(255, 255, 255, 0.493);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover .circle {
+  width: 100%;
+  box-shadow: 0 0 10px 2px white;
+}
+
+button:hover .button-text {
+  transform: translate(-1.7rem, 0);
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(8.7rem, 0);
+}
+
+button:active .circle .icon.arrow {
+  transform: translate(9.5rem, 0);
+  transition: all 0.3s;
+}
+
+button:active .circle {
+  transform: scale(0.9);
+  transition: all 0.3s;
+  box-shadow: 0 0 5px 0.5px white;
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+
+button:active .button-text {
+  color: rgba(255, 255, 255, 0.459);
+}
